@@ -1,5 +1,8 @@
 ## R functions to calculate matrix inverse and cache the result
 ## week 2 assignent
+
+## makeCacheMatrix create a list of functions
+## given a matrix as input
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   
