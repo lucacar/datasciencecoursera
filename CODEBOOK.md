@@ -82,7 +82,7 @@
 ####MeanFrequencyBodyGyroStdDevX	
 ####MeanFrequencyBodyGyroStdDevY	
 ####MeanFrequencyBodyGyroStdDevZ	
-####vMeanFrequencyBodyAccMagMean	
+####MeanFrequencyBodyAccMagMean	
 ####MeanFrequencyBodyAccMagStdDev	
 ####MeanFrequencyBodyAccJerkMagMean	
 ####MeanFrequencyBodyAccJerkMagStdDev	
