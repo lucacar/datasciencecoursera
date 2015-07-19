@@ -3,6 +3,7 @@
 
 ###The script runanalysis.R download and reads the processed experiment data and performs a number of steps to clean the data set and apply means. Please, note that the script requires PLYR to run: if not present must be installed prior running the script.
 
+##Steps executed by runanalysis.R
 ####Directories used to support input and ouptput are verified and if missing created under working directory
 ####Data files are verified and if do not exist downloaded from the repository (HTTP url)
 ####Both the processed test and training datasets are read in and merged into one data frame.
@@ -20,7 +21,7 @@
 ##### tidy.csv: CSV file (complete dataset)
 ##### tidy.csv: TXT file (complete dataset)
 
-###Columns in output file
+##Columns in output file
 ####Subject	- The id of the experiment participant.
 ####Activity - The name of the activity that the measurements correspond to
 ###All of the following fields represent the mean of recorded data points for the given subject and activity. The detailed description of the different measurement types can be found in the featuresinfo.txt file included in the data zip file.
