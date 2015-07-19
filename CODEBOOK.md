@@ -1,7 +1,7 @@
 #Cleaning and Getting Data course project code book
 ##Analysis process
 
-###The script runanalysis.R download and reads the processed experiment data and performs a number of steps to clean the data set and apply means.
+###The script runanalysis.R download and reads the processed experiment data and performs a number of steps to clean the data set and apply means. Please, note that the script requires PLYR to run: if not present must be installed prior running the script.
 
 ####Directories used to support input and ouptput are verified and if missing created under working directory
 ####Data files are verified and if do not exist downloaded from the repository (HTTP url)

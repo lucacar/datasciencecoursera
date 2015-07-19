@@ -1,5 +1,6 @@
 # This is an instruction file on how running run_analysis.R script file
 ## Step 1) Source run_analysis.R in Rstudio
+### Please, note that the script requires PLYR to run: if not present must be installed prior running the script.
 ## Step 2) Run "tidyMeans <- runAnalysis()" command in Rstudio
 ### runAnalysis() function will verify if all directories exists
 #### 1. data_har (Download directory)
