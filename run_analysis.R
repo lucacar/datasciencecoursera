@@ -54,7 +54,7 @@ runAnalysis <- function() {
   # Appropriately label the data set with descriptive variable names.
   # Change t to Time, f to Frequency, mean() to Mean and std() to StdDev using "_" to evidence them
   # Remove extra dashes and BodyBody naming error from original feature names
-  names(limited) <- gsub("^t", "Time_", names(limited))
+  names(limited) <- gsub("^t", "Time", names(limited))
   names(limited) <- gsub("^f", "Frequency", names(limited))
   names(limited) <- gsub("-mean\\(\\)", "Mean", names(limited))
   names(limited) <- gsub("-std\\(\\)", "StdDev", names(limited))
