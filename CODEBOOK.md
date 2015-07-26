@@ -1,17 +1,17 @@
 #Cleaning and Getting Data course project code book
 ##Analysis process
 
-###The script runanalysis.R download and reads the processed experiment data and performs a number of steps to clean the data set and apply means. Please, note that the script requires PLYR to run: if not present must be installed prior running the script.
+###The script runanalysis.R download and reads the experiment data and performs several steps to clean the data set and apply means. Please, note that the script requires PLYR to run: if not present must be installed prior running the script.
 
 ##Steps executed by runanalysis.R
 ####Directories used to support input and ouptput are verified and if missing created under working directory
 ####Data files are verified and if do not exist downloaded from the repository (HTTP url)
-####Both the processed test and training datasets are read in and merged into one data frame.
-####The data columns are then assigned names based on the features.txt file part of the dowloaded compressed package.
-####Columns that hold mean or standard deviation measurements are selected from the data set, all other measurement columns are excluded.
-####The activity identifiers are replaced with activity labels as reported in the activitylabels.txt file part of the dowloaded compressed package.
-####Invalid characters "()" and "-" are removed from the column names. 
-####Duplicate phrase "BodyBody" is replaced with Body.
+####Both the processed test and training datasets are read and merged into one data frame.
+####Names based on the features.txt are assigned to columns.
+####Only Columns that hold mean or standard deviation measurements are selected (all other measurement columns are excluded).
+####The activity identifiers are replaced with activity labels basing upon activitylabels.txt file values.
+####Invalid characters "()" and "-" removed from the column names. 
+####Duplicate phrase "BodyBody" replaced with Body.
 ####Characters such as "^t" and "^f" are replaced with "Time" and "Frequency"
 ####"mean" and "std" are changed to "Mean" and "StdDev" to create friendlier varaible names
 ####Data is then grouped by subject and activity, mean is calculated for every measurement colum.
