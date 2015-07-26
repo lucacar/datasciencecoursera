@@ -93,4 +93,8 @@
 ####MeanFrequencyBodyGyroJerkMagStdDev
 
 
-####Detailed information on the experiment and the data can be found in the README.txt and featuresinfo.txt files included in the experiment data zip file.
+###Detailed information on the experiment and the data can be found in the README.txt and featuresinfo.txt files included in the experiment data zip file.
+##The angular velocity vector (BodyGyro variables) are measured in radians/second. 
+##The body acceleration signal (BodyAcc variables) obtained by subtracting the gravity from the total acceleration. 
+##Frequency measured in Hertz
+
