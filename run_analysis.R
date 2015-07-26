@@ -51,8 +51,8 @@ runAnalysis <- function() {
     c("Walking", "Walking Upstairs", "Walking Downstairs", "Sitting", "Standing", "Laying")
   activities <- activityNames[yMerged]
   
-  # Appropriately label the data set with descriptive variable names.
-  # Change t to Time, f to Frequency, mean() to Mean and std() to StdDev using "_" to evidence them
+  # Label the data set with descriptive variable names.
+  # Change t to Time, f to Frequency, mean() to Mean and std() to StdDev 
   # Remove extra dashes and BodyBody naming error from original feature names
   names(limited) <- gsub("^t", "Time", names(limited))
   names(limited) <- gsub("^f", "Frequency", names(limited))
@@ -61,24 +61,25 @@ runAnalysis <- function() {
   names(limited) <- gsub("-", "", names(limited))
   names(limited) <- gsub("BodyBody", "Body", names(limited))
   
-  # Add activities and subject with nice names
+  # Add activities and subject with descriptive names
   subjectTrain <- readData("train/subject_train.txt")
   subjectTest  <- readData("test/subject_test.txt")
   subjects <- rbind(subjectTrain, subjectTest)[, 1]
   
+  #Create tidy data set
   tidy <- cbind(Subject = subjects, Activity = activities, limited)
   
   # Create a second, independent tidy data set with the average of each variable for each activity and each subject.
   library(plyr)
-  # Column means for all but the subject and activity columns
+  # calculate column means for all but the subject and activity columns
   limitedColMeans <- function(data) { colMeans(data[,-c(1,2)]) }
   tidyMeans <- ddply(tidy, .(Subject, Activity), limitedColMeans)
   names(tidyMeans)[-c(1,2)] <- paste0("Mean", names(tidyMeans)[-c(1,2)])
   
-  # Create output dir if it doesn't exist
+  # Create output directory if it doesn't exist
   outDir <- "tidyDataDir"
   dir.create(file.path(outDir), showWarnings = FALSE)
-  # Write files as table and csv
+  # Write all files (tidy and tidyMeans) as table and csv
   write.table(tidy, filePath(outDir, "tidy.txt"), row.names = FALSE)
   write.csv(tidy, filePath(outDir, "tidy.csv"), row.names = TRUE)
   write.table(tidyMeans, filePath(outDir, "tidyMeans.txt"), row.names = FALSE)
